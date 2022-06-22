@@ -28,6 +28,7 @@ function incrementarPorUno(array) {
   // Tu código:
   var suma1=1;
   for(var i=0;i<array.length;i++){
+    suma1=1;
     suma1=suma1+array[i];
     array[i]=suma1;
   }
@@ -107,16 +108,20 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  for(let i=0;i<numeros.length;i++){
-
-  }
+  return (Math.max(...numeros));
 }
 
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
-  // Escribe tu código aquí:
+  // Escribe tu código aquí
+  for(let i=0;i<arguments.length;i++){
+    const res=arguments[i].reduce((p,c)=>p*c);
+    if(arguments.length===0){
+      return 0;
+    }else{return res;}
+  }
 }
 
 
