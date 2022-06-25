@@ -188,7 +188,7 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
   var array1=[];
-  for(var i=0;i<array.lenght;i++){
+  for(var i=0;i<array.length;i++){
     if(array[i]==="Enero" || array[i]==="Marzo" || array[i]==="Noviembre"){
       array1.push(array[i]);
     }
@@ -205,7 +205,7 @@ function mayorACien(array) {
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
   var array1=[];
-  for(var i=0;i<array.lenght ;i++){
+  for(var i=0;i<array.length ;i++){
     if(array[i]>100){
       array1.push(array[i])
     }
