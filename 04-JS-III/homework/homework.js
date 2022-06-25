@@ -187,14 +187,16 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-  const array1=[]
-  const found= array.find(meses=>{ meses==="Enero";array1[0]=meses});
-  const found1= array.find(meses1=>{ meses1==="Marzo";array1[1]=meses1});
-  const found2= array.find(meses2=>{ meses2==="Noviembre";array1[2]=meses2});
-  if(found===false || found1===false || found2===false){
-    return "No se encontraron los meses pedidos";
+  var array1=[];
+  for(var i=0;i<array.lenght;i++){
+    if(array[i]==="Enero" || array[i]==="Marzo" || array[i]==="Noviembre"){
+      array1.push(array[i]);
+    }
   }
-  return array1;
+  if(array1.length===3){
+    return array1;
+  }else{ return "No se encontraron los meses pedidos"}
+  
 }
 
 
@@ -203,9 +205,9 @@ function mayorACien(array) {
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
   var array1=[];
-  for(i=0;i<array.lenght ;i++){
+  for(var i=0;i<array.lenght ;i++){
     if(array[i]>100){
-      array1.push(array[i]);
+      array1.push(array[i])
     }
   }
   return array1;
@@ -220,6 +222,17 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var nuevo=2;
+  var nuevoarray=[];
+  for(var i=0; i<10;i++){
+    nuevo=2;
+    nuevo=2+numero;
+    nuevoarray.push(nuevo);
+    if(nuevo===i){
+      break;
+    };
+  }
+  return nuevoarray;
 }
 
 
