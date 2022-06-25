@@ -116,7 +116,16 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí
-  
+  var multi=1;
+  if(arguments.length===0){
+    return 0;
+  }else if(arguments.length===1){
+    return arguments[0];
+  }else{
+    for(let i=0;i<arguments.length;i++){
+      multi=multi*arguments[i];
+    }
+  }return multi;
 }
 
 
@@ -138,42 +147,12 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  1="Domingo";
-  2="Lunes";
-  3="Martes";
-  4="Miercoles";
-  5="Jueves";
-  6="Viernes";
-  7="Sabado";
-  if(numeroDeDia===1){
-    if(1==="Domingo"){
-      return "Fin de semana";
-    }
-  if(numeroDeDia===2){
-    if(2==="Lunes"){
-        return "Es dia laboral";
-      }
-  if(numeroDeDia===3){
-    if(3==="Martes"){
-      return "Es dia laboral";
-      }
-  if(numeroDeDia===4){
-     if(4==="Miercoles"){
-      return "Es dia laboral";
-          }    
-  if(numeroDeDia===5){
-    if(5==="Jueves"){
-         return "Es dia laboral";
-         }
-   if(numeroDeDia===6){
-          if(6==="Viernes"){
-            return "Es dia laboral";
-            }       
-  if(numeroDeDia===7){
-        if(7==="Sabadp"){
-           return "Fin de semana";
-                }
-          }
+  if(numeroDeDia===1 || numeroDeDia===7){
+    return "Es fin de semana";
+  }
+  if(numeroDeDia>1 || numeroDeDia<7){
+    return "Es dia Laboral";
+  }
 
 } 
 
@@ -182,7 +161,10 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+  let num=n.toString();
+  if(num[0]==="9"){
+    return true;
+  }else{return false}
 
 }
 
@@ -191,7 +173,12 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  
+  for(var i=0;i<arreglo.length -1;i++){
+    if(arreglo[i]!==arreglo[i+1]){
+      return false;
+    }
+  }
+  return true;
 } 
 
 
@@ -200,6 +187,14 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  const array1=[]
+  const found= array.find(meses=>{ meses==="Enero";array1[0]=meses});
+  const found1= array.find(meses1=>{ meses1==="Marzo";array1[1]=meses1});
+  const found2= array.find(meses2=>{ meses2==="Noviembre";array1[2]=meses2});
+  if(found===false || found1===false || found2===false){
+    return "No se encontraron los meses pedidos";
+  }
+  return array1;
 }
 
 
@@ -207,6 +202,13 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var array1=[];
+  for(i=0;i<array.lenght ;i++){
+    if(array[i]>100){
+      array1.push(array[i]);
+    }
+  }
+  return array1;
 }
 
 
