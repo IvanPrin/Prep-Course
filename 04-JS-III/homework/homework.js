@@ -224,13 +224,14 @@ function breakStatement(numero) {
   // Tu código:
   var nuevo=2;
   var nuevoarray=[];
-  for(var i=0; i<10;i++){
+  for(var i=0; i<numero.length;i++){
     nuevo=2;
     nuevo=2+numero;
     nuevoarray.push(nuevo);
     if(nuevo===i){
-      break;
-    };
+      return "Se interrumpuió la ejecución";
+    }
+    break;
   }
   return nuevoarray;
 }
