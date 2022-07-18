@@ -12,6 +12,8 @@ img{
     background-color: aqua;
     padding: 50px;
     border: 4mm ridge rgba(211, 220, 50, .6);
+    margin: 20px;
+    
 }
 #spanId{
     color: blueviolet;
@@ -19,4 +21,7 @@ img{
 }
 h1{
     color: blueviolet;
+}
+.divClass{
+    background-color: dimgray;
 }
